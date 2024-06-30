@@ -57,6 +57,8 @@ This document provides a step-by-step guide to setting up the environment and ex
 
       Follow the prompts to complete the authentication.
 
+      OR Put the configuration file path in the main.tf file inside the terraform folder
+
 ### Step 4: Extract, Validate, and Clean Data
 
 1. Open and run the `Extract_validate_and_clean_data.ipynb` notebook.
@@ -156,6 +158,7 @@ Example queries are provided to aggregate relevant data:
 ### Future Improvements
 
 - Implement additional data validation checks.
-- Optimize schema for better performance with large datasets.
+- Use Dbt for Transformation
+- Building a robust testing pipeline
 - Use advanced features of BigQuery like partitioning and clustering.
 
