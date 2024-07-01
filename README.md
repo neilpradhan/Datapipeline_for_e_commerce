@@ -168,5 +168,6 @@ Example queries are provided to aggregate relevant data:
 - Use Dbt for Transformation
 - Building a robust testing pipeline
 - Use advanced features of BigQuery like partitioning and clustering.
+- Consider different kinds of Data modelling depending on the scope of queries and performance required
 
 
