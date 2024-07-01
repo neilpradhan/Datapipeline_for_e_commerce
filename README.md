@@ -57,7 +57,7 @@ This document provides a step-by-step guide to setting up the environment and ex
 
       Follow the prompts to complete the authentication.
 
-      OR Put the configuration file path in the main.tf file inside the terraform folder
+      OR put the configuration file in Terraform 
 
 ### Step 4: Extract, Validate, and Clean Data
 
@@ -66,8 +66,6 @@ This document provides a step-by-step guide to setting up the environment and ex
 3. Upon completion, a folder named `Processed_data` will be created in the root directory with the following subfolders:
     - `cleaned_data`: Contains the cleaned data files.
     - `bad_data`: Contains the invalid data files.
-
-
 
 
 
@@ -95,11 +93,20 @@ To set up the BigQuery resources using Terraform:
 
 ### Step 6: Transform Data into Data Model and Store it into Data Warehouse
 
-1. Open and run the `Transform_into_data_model.ipynb` notebook.
+1. Open and run the `Transform_into_data_model.ipynb` notebook for the initial first-time load
 2. This notebook will:
     - Take the files from the `cleaned_data` folder.
     - Create the data model (Dimensions and Facts).
     - Load the dimension and fact tables into the Google BigQuery warehouse.
+
+### Step 7: Incremental Data loading and Slowly changing dimensions type 2 implementation
+
+1. For the subsequent incremental loads use the notebook `Incremental_load.ipynb`
+
+2. This notebook will:
+    - append the records for Fact tables
+    - Apply SCD - type 2 for dimension tables
+
 
 ### Analytics Queries
 
@@ -161,4 +168,5 @@ Example queries are provided to aggregate relevant data:
 - Use Dbt for Transformation
 - Building a robust testing pipeline
 - Use advanced features of BigQuery like partitioning and clustering.
+
 
